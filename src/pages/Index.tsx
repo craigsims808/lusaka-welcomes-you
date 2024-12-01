@@ -1,11 +1,15 @@
 import { MapPin, Phone, Mail, BedDouble, Wifi, Coffee, UtensilsCrossed } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
+      <Header />
+      
       {/* Hero Section */}
-      <div className="relative h-screen">
+      <div className="relative h-screen" id="home">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center">
           <div className="absolute inset-0 bg-black/40" />
         </div>
@@ -21,7 +25,7 @@ const Index = () => {
       </div>
 
       {/* Features Section */}
-      <div className="py-20 bg-hotel-light">
+      <div className="py-20 bg-hotel-light" id="amenities">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-hotel-text">Our Amenities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -42,7 +46,7 @@ const Index = () => {
       </div>
 
       {/* Rooms Section */}
-      <div className="py-20">
+      <div className="py-20" id="rooms">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-hotel-text">Our Rooms</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -80,7 +84,7 @@ const Index = () => {
       </div>
 
       {/* Contact Section */}
-      <div className="bg-hotel-secondary py-20">
+      <div className="bg-hotel-secondary py-20" id="contact">
         <div className="container mx-auto">
           <div className="bg-white rounded-lg p-8 md:p-12 shadow-lg">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -110,6 +114,8 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
